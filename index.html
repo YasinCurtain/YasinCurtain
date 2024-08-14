@@ -1,9 +1,100 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
 
-<h2>The samp Element</h2>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yasin Curtain</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Video Background Styles */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            opacity: 0.7;
+            animation: fadeIn 2s ease-in-out;
+        }
 
+        /* Fade In Effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<!-- Video Background -->
+<video class="video-background object-cover" autoplay muted loop>
+    <source src="https://media.istockphoto.com/id/1443805565/video/transparent-curtain-on-the-window-gently-moved-by-the-wind-sunlight-suns-rays-shine-through.mp4?s=mp4-640x640-is&k=20&c=TEIV4cyTfi1kIRdg4AMwyzGLcxbh-19DnvP3-yBiE9A=" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<div class="absolute top-0 left-0 w-full h-full bg-black opacity-10 z-0"></div>
+
+<body class="bg-gray-200 flex items-center justify-center h-screen">
+    <!-- Video Background -->
+    
+
+    <div class="text-center relative z-10">
+        <!-- Logo and Title -->
+        <div class="relative flex flex-col items-center justify-center">
+            <img src="https://i.imgur.com/vd94ys3.png" alt="Product Image 1" class="h-56 w-56 mx-auto drop-shadow-2xl">
+          
+            <div class="mb-8 -mt-5">
+                <h1 class="text-2xl font-bold text-gray-50 bg-[#d97e93] p-2 rounded-md">سناتر یاسین | پەردەی یاسین</h1>
+                <p class="text-base mt-2 text-gray-800">بۆ دوورین و دانانی هەموو جۆرە پەردەیەک</p>
+            </div>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="space-y-4 flex flex-col transition-all mb-8">
+            <a href="https://www.facebook.com/share/4RY14z94ipQcVULH/?mibextid=qi2Omg">
+                <button class="w-full hover:bg-[#0866ff]/80 py-2 text-lg bg-[#0866ff] text-gray-50 rounded-full">Facebook</button>
+            </a>
+
+            <a href="https://www.facebook.com/share/4RY14z94ipQcVULH/?mibextid=qi2Omg">
+                <button class="w-full py-2 text-lg text-white rounded-full bg-gradient-to-r from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888] hover:bg-gradient-to-l">
+                    Instagram
+                </button>
+            </a>
+
+            <a href="https://t.me/yasincurtain">
+                <button class="w-full py-2 text-lg text-white rounded-full bg-[#0088cc] hover:bg-[#007ab8]">
+                    Telegram
+                </button>
+            </a>
+
+            <!-- WhatsApp Button with Dropdown -->
+            <div class="relative">
+                <button onclick="toggleDropdown()" class="w-full py-2 text-lg text-white rounded-full bg-[#25D366] hover:bg-[#1ebd57]">
+                    WhatsApp
+                </button>
+                <div id="phoneDropdown" class="hidden mt-2 space-y-2 transition-all duration-300">
+                    <a href="https://wa.me/+9647725342410" class="block py-2 text-lg text-[#25D366] bg-white rounded-full hover:bg-gray-100">
+                        0772 534 2410
+                    </a>
+                    <a href="https://wa.me/+9647501902138" class="block py-2 text-lg text-[#25D366] bg-white rounded-full hover:bg-gray-100">
+                        0750 190 2138
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDropdown() {
+            const dropdown = document.getElementById('phoneDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+    </script>
 </body>
-</html>
 
+</html>
